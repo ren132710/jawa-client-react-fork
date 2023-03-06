@@ -1,0 +1,46 @@
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  transition: all 0.25s;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* draw the hamburger */
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--color);
+  /* initialize rotation */
+  transform: rotate(0);
+  transition: all 400ms;
+}
+
+/* spread the spans to create the hamburger */
+.hamburger-middle {
+  width: 16px;
+  transform: translateY(7px) translateX(8px);
+}
+
+.hamburger-bottom {
+  display: none;
+}
+
+/* toggle the hamburger */
+:global(.open) .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+:global(.open) .hamburger-middle {
+  width: 24px;
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}

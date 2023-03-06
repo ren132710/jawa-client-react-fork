@@ -1,0 +1,40 @@
+.place-btn-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
+  background: var(--white);
+  height: 16px;
+  width: 16px;
+  border: 1px solid var(--grey-90);
+  /* border-radius: 50%; */
+  border-radius: 98px;
+  z-index: 10;
+}
+
+.svg-x {
+  height: 8px;
+  width: 8px;
+  stroke: hsl(0, 0%, 69%);
+  stroke-width: 3;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.place-btn-delete:hover {
+  box-shadow: 0 0 5px 0 var(--white);
+}
+
+.place-btn-delete:focus {
+  background-color: var(--blue-10);
+  box-shadow: 0 0 8px 0 var(--blue-20);
+}
+
+/* light mode */
+body[data-theme='light'] .place-btn-delete:hover {
+  box-shadow: 0 0 5px 0 var(--skyblue-85);
+}

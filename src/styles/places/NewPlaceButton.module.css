@@ -1,0 +1,23 @@
+.place-btn-new {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 0.6rem;
+  font-style: italic;
+  border: none;
+  border-radius: 0.3em;
+  color: var(--blue-30);
+  text-decoration: underline;
+  padding: 0 0.2rem;
+  transition: 100ms linear;
+}
+
+.place-btn-new:hover {
+  text-decoration: none;
+  color: var(--blue-40);
+}
+
+/* dark mode */
+body[data-theme='dark'] .place-btn-new {
+  color: var(--blue-65);
+}

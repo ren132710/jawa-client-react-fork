@@ -1,0 +1,31 @@
+.main {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas:
+    'current'
+    'daily'
+    'hourly';
+  width: 100%;
+  margin: 0 auto;
+}
+
+.current-section {
+  grid-area: current;
+}
+
+.daily-section {
+  grid-area: daily;
+}
+
+.hourly-section {
+  grid-area: hourly;
+}
+
+@media screen and (min-width: 1022px) {
+  .main {
+    grid-template-columns: minmax(375px, 1fr) 1.5fr;
+    grid-template-areas:
+      'current daily'
+      'hourly hourly';
+  }
+}
